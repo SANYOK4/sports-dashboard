@@ -1,0 +1,56 @@
+header {
+  background-color: #0f172a; /* Глибокий темний колір (як на Flashscore) */
+  color: white;
+  padding: 0 20px;
+  border-bottom: 1px solid #1e293b;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  max-width: 1200px; /* Обмежуємо ширину, щоб не розтягувалось на весь екран */
+  margin: 0 auto;    /* Центруємо шапку */
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-right: 40px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+nav {
+  display: flex;
+  height: 100%; /* Навігація на всю висоту шапки */
+}
+
+nav a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #94a3b8; /* Сірий колір неактивних пунктів */
+  text-decoration: none;
+  padding: 0 15px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  height: 100%;
+  border-bottom: 3px solid transparent; /* Прихована лінія знизу */
+  transition: all 0.3s;
+}
+
+/* Ефект при наведенні та активний пункт */
+nav a:hover, nav a.active {
+  color: white;
+  background-color: #1e293b; /* Трохи світліший фон */
+  border-bottom-color: #ef4444; /* Червона смужка знизу як на Flashscore */
+}
+
+.icon {
+  font-size: 1.2rem;
+}

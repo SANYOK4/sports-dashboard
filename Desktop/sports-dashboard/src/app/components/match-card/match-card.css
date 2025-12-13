@@ -1,0 +1,72 @@
+/* Робимо рядок, а не картку */
+.match-row {
+  display: flex;
+  align-items: center;
+  padding: 12px 15px;
+  background-color: #1f2937;
+  border-radius: 12px;
+  margin-bottom: 8px;
+  border: 1px solid #374151;
+  
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+/* Ефект наведення (світлішає, як на Flashscore) */
+.match-row:hover {
+  background-color: #2d3748;
+  transform: scale(1.01);    /* Ледь помітне збільшення при наведенні */
+  border-color: #4b5563;
+}
+
+/* Блок часу зліва */
+.time-box {
+  display: flex;
+  flex-direction: column; /* Час під статусом */
+  align-items: center;
+  width: 50px;            /* Фіксована ширина */
+  font-size: 0.75rem;
+  color: #9ca3af;
+  margin-right: 20px;
+}
+
+.status.live {
+  color: #ef4444; /* Червоний колір для LIVE */
+  font-weight: bold;
+}
+
+/* Команди */
+.team {
+  flex: 1; /* Займають весь вільний простір */
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Відступ між назвою і прапором */
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #f3f4f6;
+}
+
+/* Специфіка для домашньої команди (щоб текст був ближче до центру) */
+.home {
+  justify-content: flex-end; /* Притиснути вправо */
+  text-align: right;
+}
+
+/* Специфіка для гостей */
+.away {
+  justify-content: flex-start; /* Притиснути вліво */
+}
+
+/* Рахунок по центру */
+.score {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #3b82f6; /* Акцентний колір */
+  margin: 0 15px; /* Відступи від команд */
+  min-width: 40px;
+  text-align: center;
+}
+
+.flag {
+  font-size: 1.2rem;
+}

@@ -1,0 +1,20 @@
+<div class="match-row">
+  <div class="time-box">
+    <span class="status live" *ngIf="match.status === 'LIVE'">LIVE</span>
+    <span class="time">{{ match.time }}</span>
+  </div>
+
+  <div class="team home">
+    <span class="name">{{ match.home }}</span>
+    <span class="flag">{{ match.homeFlag }}</span>
+  </div>
+
+  <div class="score">
+    {{ match.score }}
+  </div>
+
+  <div class="team away">
+    <span class="flag">{{ match.awayFlag }}</span>
+    <span class="name">{{ match.away }}</span>
+  </div>
+</div>

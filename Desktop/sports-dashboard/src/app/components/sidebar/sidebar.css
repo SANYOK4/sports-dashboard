@@ -1,0 +1,49 @@
+.sidebar {
+  background-color: #1f2937; /* Такий же колір як у карток */
+  border-radius: 12px;
+  padding: 20px;
+  width: 250px; /* Фіксована ширина */
+  height: fit-content; /* Висота по контенту */
+  border: 1px solid #374151;
+}
+
+.section-title {
+  font-size: 0.75rem;
+  font-weight: bold;
+  color: #9ca3af; /* Сірий текст */
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.mt {
+  margin-top: 25px; /* Відступ для другої секції */
+}
+
+.league-list {
+  list-style: none; /* Прибрати крапки списку */
+  padding: 0;
+  margin: 0;
+}
+
+.league-list li {
+  padding: 10px 12px;
+  color: #e5e7eb;
+  font-size: 0.9rem;
+  cursor: pointer;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: background-color 0.2s;
+}
+
+.league-list li:hover {
+  background-color: #374151; /* Підсвітка при наведенні */
+  color: #3b82f6; /* Синій текст */
+}
+
+.flag {
+  font-size: 1.2rem;
+}

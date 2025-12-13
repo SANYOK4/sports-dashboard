@@ -1,0 +1,22 @@
+<app-header></app-header>
+
+<div class="main-container">
+  
+  <app-sidebar (onLeagueSelect)="filterByLeague($event)"></app-sidebar>
+
+  <main class="content">
+    <div class="league-header">
+      🏆 ЛІГА ЄВРОПИ • Груповий етап
+    </div>
+
+    <div class="matches-list">
+      <div class="matches-list">
+      <app-match-card 
+        *ngFor="let item of matches"
+        [match]="item">
+      </app-match-card>
+      </div>
+    </div>
+  </main>
+
+</div>
