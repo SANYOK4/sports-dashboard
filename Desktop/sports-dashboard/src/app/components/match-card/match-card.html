@@ -1,4 +1,5 @@
-<div class="match-row">
+<div class="match-row" (click)="toggle()" [class.active-card]="isOpen">
+  
   <div class="time-box">
     <span class="status live" *ngIf="match.status === 'LIVE'">LIVE</span>
     <span class="time">{{ match.time }}</span>
@@ -9,12 +10,22 @@
     <span class="flag">{{ match.homeFlag }}</span>
   </div>
 
-  <div class="score">
+  <div class="score" 
+       [class.live-match]="match.status === 'LIVE'"
+       [class.finished-match]="match.status === 'Finished'">
     {{ match.score }}
   </div>
 
   <div class="team away">
     <span class="flag">{{ match.awayFlag }}</span>
     <span class="name">{{ match.away }}</span>
+  </div>
+
+</div>
+
+<div class="match-details" [class.open]="isOpen">
+  <div class="details-content">
+    <h3>Подробиці матчу:</h3>
+    <p>{{ match.details }}</p>
   </div>
 </div>

@@ -2,11 +2,19 @@
 
 <div class="main-container">
   
-  <app-sidebar (onLeagueSelect)="filterByLeague($event)"></app-sidebar>
+  <app-sidebar (selectLeague)="filterMatches($event)"></app-sidebar>
 
   <main class="content">
+    <div class="search-box">
+  <input 
+    type="text" 
+    placeholder="🔍 Пошук команди..." 
+    (input)="onSearch($event)"
+  >
+  </div>
     <div class="league-header">
-      🏆 ЛІГА ЄВРОПИ • Груповий етап
+      <h2>{{ currentTitle }}</h2>
+      <span class="subtitle">Оновлено щойно</span>
     </div>
 
     <div class="matches-list">

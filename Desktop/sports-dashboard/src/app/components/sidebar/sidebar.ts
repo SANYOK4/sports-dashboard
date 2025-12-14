@@ -1,18 +1,17 @@
-import { Component, Output, EventEmitter } from '@angular/core'; // <--- Додали Output, EventEmitter
+import { Component, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-sidebar',
   standalone: true,
-  imports: [],
   templateUrl: './sidebar.html',
   styleUrl: './sidebar.css'
 })
 export class Sidebar {
-  // Створюємо "антену" для передачі сигналу батькові
-  @Output() onLeagueSelect = new EventEmitter<string>();
+  // 👇 ОСЬ ТУТ БУЛА ПРОБЛЕМА
+  // Ми додали <string>, щоб Angular знав: ми передаємо текст!
+  @Output() selectLeague = new EventEmitter<string>();
 
-  // Цю функцію викличе клік по кнопці
-  select(league: string) {
-    this.onLeagueSelect.emit(league);
+  select(category: string) {
+    this.selectLeague.emit(category);
   }
 }

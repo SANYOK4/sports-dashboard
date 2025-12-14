@@ -11,3 +11,62 @@
 .content {
   flex: 1; 
 }
+
+.league-header {
+  /* Градієнтний фон (від темно-синього до чорного) */
+  background: linear-gradient(135deg, #1e3a8a 0%, #111827 100%);
+  
+  padding: 20px 25px;
+  border-radius: 16px;       /* Закруглені кути */
+  margin-bottom: 20px;       /* Відступ від матчів */
+  
+  /* Тінь і рамка для об'єму */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.league-header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 0.5px;
+  text-transform: uppercase; /* Всі літери великі */
+  
+  /* Легке світіння тексту */
+  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+.league-header .subtitle {
+  font-size: 0.85rem;
+  color: #94a3b8;
+  font-weight: 500;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 5px 10px;
+  border-radius: 20px;
+}
+
+.search-box {
+  margin-bottom: 20px;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 12px 20px;
+  background-color: #1f2937;
+  border: 1px solid #374151;
+  border-radius: 12px;
+  color: #fff;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.3s;
+}
+
+.search-box input:focus {
+  border-color: #3b82f6; /* Синя рамка при кліку */
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
+}

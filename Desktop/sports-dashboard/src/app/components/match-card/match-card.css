@@ -59,14 +59,78 @@
 
 /* Рахунок по центру */
 .score {
-  font-weight: bold;
-  font-size: 1.1rem;
-  color: #3b82f6; /* Акцентний колір */
-  margin: 0 15px; /* Відступи від команд */
-  min-width: 40px;
+  font-size: 1.4rem;
+  font-weight: 800;
+  min-width: 80px;
   text-align: center;
+  transition: all 0.3s ease; /* Плавна зміна кольору */
 }
 
 .flag {
   font-size: 1.2rem;
+}
+
+.score.live-match {
+  color: #ff4757; /* Яскраво-червоний */
+  text-shadow: 0 0 10px rgba(255, 71, 87, 0.4); /* Ефект світіння */
+}
+
+/* ⚪ Якщо матч закінчився */
+.score.finished-match {
+  color: #747d8c; /* Сірий колір */
+}
+
+/* 🔥 Анімація пульсації для напису LIVE зліва */
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+
+.status.live {
+  color: #ff4757;
+  font-weight: bold;
+  animation: pulse 1.5s infinite; /* Нескінченна пульсація */
+}
+
+.match-row.active-card {
+  background-color: #2d3748;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom: 1px solid transparent; /* Прибрати лінію знизу */
+}
+
+/* --- Блок деталей (секретна частина) --- */
+.match-details {
+  background-color: #1a202c; /* Темніший фон */
+  margin: 0 4px 8px 4px;     /* Трохи вужчий за картку */
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  border: 1px solid #374151;
+  border-top: none;
+  overflow: hidden;          /* Ховає все, що вилазить */
+  
+  /* МАГІЯ АНІМАЦІЇ 👇 */
+  max-height: 0;             /* Початкова висота 0 (сховано) */
+  opacity: 0;                /* Повністю прозорий */
+  transition: all 0.4s ease-in-out; /* Плавність 0.4 секунди */
+}
+
+/* Коли Angular додає клас .open */
+.match-details.open {
+  max-height: 200px;         /* Розкриваємо висоту (із запасом) */
+  opacity: 1;                /* Робимо видимим */
+}
+
+.details-content {
+  padding: 15px;
+  color: #d1d5db;
+  font-size: 0.9rem;
+}
+
+.details-content h3 {
+  margin: 0 0 5px 0;
+  font-size: 0.8rem;
+  color: #9ca3af;
+  text-transform: uppercase;
 }
